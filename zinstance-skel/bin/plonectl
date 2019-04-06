@@ -1,0 +1,14 @@
+#!/plone/Python-2.4/bin/python
+
+import sys
+sys.path[0:0] = [
+  '/plone/buildout-cache/eggs/plone.recipe.unifiedinstaller-0.9-py2.4.egg',
+  '/plone/buildout-cache/eggs/zc.recipe.egg-1.2.2-py2.4.egg',
+  '/plone/buildout-cache/eggs/zc.buildout-1.4.4-py2.4.egg',
+  '/plone/buildout-cache/eggs/setuptools-0.6c11-py2.4.egg',
+  ]
+
+import plone.recipe.unifiedinstaller.ctl
+
+if __name__ == '__main__':
+    plone.recipe.unifiedinstaller.ctl.main(server='', clients=['instance'], location=r'/plone/zinstance', binDirectory=r'/plone/zinstance/bin', fileStorage=r'/plone/zinstance/var/filestorage/Data.fs')
